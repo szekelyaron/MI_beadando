@@ -1,3 +1,5 @@
+from utils.feedback import get_preference
+
 def fuzzy_score(food, age, allergies, prefs):
     if set(food["allergens"]) & set(allergies):
         return 0.0
@@ -14,6 +16,8 @@ def fuzzy_score(food, age, allergies, prefs):
     keywords = ["zöldség", "gyümölcs", "csirke", "püré", "hal", "főzelék"]
     type_bonus = 0.1 if any(k in food["name"].lower() for k in keywords) else 0.0
 
-    total = (age_score * 0.6) + (texture_score * 0.3) + (type_bonus * 0.1)
+    preference = get_preference(food["name"])
+
+    total = (age_score * 0.5) + (texture_score * 0.3) + (type_bonus * 0.1) + (preference * 0.1)
 
     return round(total, 2)
