@@ -1,103 +1,710 @@
 [
-{"name":"Almapüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Banánpüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Körtépüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Őszibarackpüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Sütőtökpüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Répapüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Cukkínipüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Burgonyapüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Zöldségpüré","min_age":6,"texture":"püré","allergens":[]},
-{"name":"Rizspép","min_age":6,"texture":"püré","allergens":["glutén"]},
-{"name":"Banános zabkása","min_age":7,"texture":"püré","allergens":["glutén"]},
-{"name":"Almás zabkása","min_age":7,"texture":"püré","allergens":["glutén"]},
-{"name":"Kukoricakása","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Körtés köleskása","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Zöldborsópüré","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Brokkolipüré","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Karfiolpüré","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Csirkepüré","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Pulykapüré","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Sárgarépa burgonyával","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Almás joghurt","min_age":8,"texture":"püré","allergens":["tej"]},
-{"name":"Banános joghurt","min_age":8,"texture":"püré","allergens":["tej"]},
-{"name":"Zöldséges csirkepüré","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Zöldséges pulykapüré","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Édesburgonya püré","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Céklapüré","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Sütőtök almával","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Zöldbabpüré","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Répás lencsepüré","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Tojássárgájás burgonyapüré","min_age":8,"texture":"püré","allergens":["tojás"]},
-{"name":"Puha zöldségmix","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Puha csirkeragu","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Puha pulykaragu","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Rizs csirkével","min_age":9,"texture":"puha","allergens":["glutén"]},
-{"name":"Zöldséges rizs","min_age":9,"texture":"puha","allergens":["glutén"]},
-{"name":"Spenótfőzelék","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Zöldbabfőzelék","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Halpüré","min_age":9,"texture":"püré","allergens":["hal"]},
-{"name":"Lazacos burgonyapüré","min_age":9,"texture":"püré","allergens":["hal"]},
-{"name":"Zöldséges tojásrántotta","min_age":9,"texture":"puha","allergens":["tojás"]},
-{"name":"Darabos zöldségleves","min_age":10,"texture":"puha","allergens":[]},
-{"name":"Darabos csirkeragu","min_age":10,"texture":"darabos","allergens":[]},
-{"name":"Darabos pulykaragu","min_age":10,"texture":"darabos","allergens":[]},
-{"name":"Tojásos tészta","min_age":10,"texture":"darabos","allergens":["tojás","glutén"]},
-{"name":"Zöldséges tészta","min_age":10,"texture":"darabos","allergens":["glutén"]},
-{"name":"Sült zöldség falatok","min_age":10,"texture":"darabos","allergens":[]},
-{"name":"Puha csirkefasírt","min_age":10,"texture":"darabos","allergens":[]},
-{"name":"Rántott halfalat","min_age":10,"texture":"darabos","allergens":["hal","glutén"]},
-{"name":"Zabpelyhes almaszelet","min_age":10,"texture":"darabos","allergens":["glutén"]},
-{"name":"Reszelt krumpli","min_age":10,"texture":"darabos","allergens":["glutén"]},
-{"name":"Marhapörkölt puha zöldségekkel","min_age":11,"texture":"darabos","allergens":[]},
-{"name":"Hal rizzsel","min_age":11,"texture":"darabos","allergens":["hal"]},
-{"name":"Tejes zabkása almával","min_age":11,"texture":"püré","allergens":["tej","glutén"]},
-{"name":"Túrós gyümölcskrém","min_age":11,"texture":"püré","allergens":["tej"]},
-{"name":"Zöldséges omlett","min_age":11,"texture":"darabos","allergens":["tojás"]},
-{"name":"Csirkés rizottó","min_age":11,"texture":"darabos","allergens":["glutén"]},
-{"name":"Pulykás kuszkusz","min_age":11,"texture":"darabos","allergens":["glutén"]},
-{"name":"Spenótos tészta","min_age":11,"texture":"darabos","allergens":["glutén"]},
-{"name":"Zöldséges bulgur","min_age":11,"texture":"darabos","allergens":["glutén"]},
-{"name":"Halpogácsa","min_age":11,"texture":"darabos","allergens":["hal"]},
-{"name":"Túrós csusza","min_age":12,"texture":"darabos","allergens":["tej","glutén"]},
-{"name":"Túrógombóc","min_age":12,"texture":"darabos","allergens":["tej","glutén"]},
-{"name":"Rakott zöldség","min_age":12,"texture":"darabos","allergens":[]},
-{"name":"Sült csirkemell falatok","min_age":12,"texture":"darabos","allergens":[]},
-{"name":"Sült pulykamell falatok","min_age":12,"texture":"darabos","allergens":[]},
-{"name":"Zöldséges lasagne","min_age":12,"texture":"darabos","allergens":["glutén","tej"]},
-{"name":"Halas tészta","min_age":12,"texture":"darabos","allergens":["hal","glutén"]},
-{"name":"Zöldséges húsgombóc","min_age":12,"texture":"darabos","allergens":[]},
-{"name":"Rántotta kenyérrel","min_age":12,"texture":"darabos","allergens":["tojás","glutén"]},
-{"name":"Zöldséges rakott burgonya","min_age":12,"texture":"darabos","allergens":["tej"]},
-{"name":"Almás köleskása","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Körtés köleskása","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Zöldséges kölespüré","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Sütőtökös rizspép","min_age":7,"texture":"püré","allergens":["glutén"]},
-{"name":"Répás burgonyapüré","min_age":7,"texture":"püré","allergens":[]},
-{"name":"Zöldséges marhapüré","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Almás túrókrém","min_age":8,"texture":"püré","allergens":["tej"]},
-{"name":"Körtés túrókrém","min_age":8,"texture":"püré","allergens":["tej"]},
-{"name":"Zöldséges halpüré","min_age":8,"texture":"püré","allergens":["hal"]},
-{"name":"Csirkés zöldségkrém","min_age":8,"texture":"püré","allergens":[]},
-{"name":"Párolt zöldségfalatok","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Puha burgonyafőzelék","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Puha sárgarépafőzelék","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Zöldséges lencsefőzelék","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Csirkés zöldségleves","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Halas zöldségleves","min_age":9,"texture":"puha","allergens":["hal"]},
-{"name":"Rizses zöldségtál","min_age":9,"texture":"puha","allergens":["glutén"]},
-{"name":"Pulykás zöldségtál","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Spenótos burgonyafőzelék","min_age":9,"texture":"puha","allergens":[]},
-{"name":"Zöldséges tojáslepény","min_age":9,"texture":"puha","allergens":["tojás"]},
-{"name":"Darabos csirkés zöldségtál","min_age":10,"texture":"darabos","allergens":[]},
-{"name":"Darabos pulykás zöldségtál","min_age":10,"texture":"darabos","allergens":[]},
-{"name":"Darabos halas rizs","min_age":10,"texture":"darabos","allergens":["hal","glutén"]},
-{"name":"Zöldséges tojásos rizs","min_age":10,"texture":"darabos","allergens":["tojás","glutén"]},
-{"name":"Zöldséges rakott tészta","min_age":10,"texture":"darabos","allergens":["glutén"]},
-{"name":"Csirkés rakott burgonya","min_age":10,"texture":"darabos","allergens":["tej"]},
-{"name":"Zöldséges csirkemell falatok","min_age":11,"texture":"darabos","allergens":[]},
-{"name":"Zöldséges pulykamell falatok","min_age":11,"texture":"darabos","allergens":[]},
-{"name":"Húsos zöldséges egytálétel","min_age":11,"texture":"darabos","allergens":[]},
-{"name":"Zöldséges halpogácsa","min_age":11,"texture":"darabos","allergens":["hal"]}
-
+  {
+    "name": "Almapüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Banánpüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Körtépüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Őszibarackpüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Sütőtökpüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Répapüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Cukkínipüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Burgonyapüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Zöldségpüré",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Rizspép",
+    "min_age": 6,
+    "texture": "püré",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Banános zabkása",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Almás zabkása",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Kukoricakása",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Körtés köleskása",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Zöldborsópüré",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Brokkolipüré",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Karfiolpüré",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Csirkepüré",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Pulykapüré",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Sárgarépa burgonyával",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Almás joghurt",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": [
+      "tej"
+    ]
+  },
+  {
+    "name": "Banános joghurt",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": [
+      "tej"
+    ]
+  },
+  {
+    "name": "Zöldséges csirkepüré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Zöldséges pulykapüré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Édesburgonya püré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Céklapüré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Sütőtök almával",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Zöldbabpüré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Répás lencsepüré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Tojássárgájás burgonyapüré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": [
+      "tojás"
+    ]
+  },
+  {
+    "name": "Puha zöldségmix",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Puha csirkeragu",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Puha pulykaragu",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Rizs csirkével",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Zöldséges rizs",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Spenótfőzelék",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Zöldbabfőzelék",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Halpüré",
+    "min_age": 9,
+    "texture": "püré",
+    "allergens": [
+      "hal"
+    ]
+  },
+  {
+    "name": "Lazacos burgonyapüré",
+    "min_age": 9,
+    "texture": "püré",
+    "allergens": [
+      "hal"
+    ]
+  },
+  {
+    "name": "Zöldséges tojásrántotta",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": [
+      "tojás"
+    ]
+  },
+  {
+    "name": "Darabos zöldségleves",
+    "min_age": 10,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Darabos csirkeragu",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Darabos pulykaragu",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Tojásos tészta",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "tojás",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Zöldséges tészta",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Sült zöldség falatok",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Puha csirkefasírt",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Rántott halfalat",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "hal",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Zabpelyhes almaszelet",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Reszelt krumpli",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Marhapörkölt puha zöldségekkel",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Hal rizzsel",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": [
+      "hal"
+    ]
+  },
+  {
+    "name": "Tejes zabkása almával",
+    "min_age": 11,
+    "texture": "püré",
+    "allergens": [
+      "tej",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Túrós gyümölcskrém",
+    "min_age": 11,
+    "texture": "püré",
+    "allergens": [
+      "tej"
+    ]
+  },
+  {
+    "name": "Zöldséges omlett",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": [
+      "tojás"
+    ]
+  },
+  {
+    "name": "Csirkés rizottó",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Pulykás kuszkusz",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Spenótos tészta",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Zöldséges bulgur",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Halpogácsa",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": [
+      "hal"
+    ]
+  },
+  {
+    "name": "Túrós csusza",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": [
+      "tej",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Túrógombóc",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": [
+      "tej",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Rakott zöldség",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Sült csirkemell falatok",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Sült pulykamell falatok",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Zöldséges lasagne",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": [
+      "glutén",
+      "tej"
+    ]
+  },
+  {
+    "name": "Halas tészta",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": [
+      "hal",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Zöldséges húsgombóc",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Rántotta kenyérrel",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": [
+      "tojás",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Zöldséges rakott burgonya",
+    "min_age": 12,
+    "texture": "darabos",
+    "allergens": [
+      "tej"
+    ]
+  },
+  {
+    "name": "Almás köleskása",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Körtés köleskása",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Zöldséges kölespüré",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Sütőtökös rizspép",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Répás burgonyapüré",
+    "min_age": 7,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Zöldséges marhapüré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Almás túrókrém",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": [
+      "tej"
+    ]
+  },
+  {
+    "name": "Körtés túrókrém",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": [
+      "tej"
+    ]
+  },
+  {
+    "name": "Zöldséges halpüré",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": [
+      "hal"
+    ]
+  },
+  {
+    "name": "Csirkés zöldségkrém",
+    "min_age": 8,
+    "texture": "püré",
+    "allergens": []
+  },
+  {
+    "name": "Párolt zöldségfalatok",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Puha burgonyafőzelék",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Puha sárgarépafőzelék",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Zöldséges lencsefőzelék",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Csirkés zöldségleves",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Halas zöldségleves",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": [
+      "hal"
+    ]
+  },
+  {
+    "name": "Rizses zöldségtál",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Pulykás zöldségtál",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Spenótos burgonyafőzelék",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": []
+  },
+  {
+    "name": "Zöldséges tojáslepény",
+    "min_age": 9,
+    "texture": "puha",
+    "allergens": [
+      "tojás"
+    ]
+  },
+  {
+    "name": "Darabos csirkés zöldségtál",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Darabos pulykás zöldségtál",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Darabos halas rizs",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "hal",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Zöldséges tojásos rizs",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "tojás",
+      "glutén"
+    ]
+  },
+  {
+    "name": "Zöldséges rakott tészta",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "glutén"
+    ]
+  },
+  {
+    "name": "Csirkés rakott burgonya",
+    "min_age": 10,
+    "texture": "darabos",
+    "allergens": [
+      "tej"
+    ]
+  },
+  {
+    "name": "Zöldséges csirkemell falatok",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Zöldséges pulykamell falatok",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Húsos zöldséges egytálétel",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": []
+  },
+  {
+    "name": "Zöldséges halpogácsa",
+    "min_age": 11,
+    "texture": "darabos",
+    "allergens": [
+      "hal"
+    ]
+  },
+  {
+    "name": "Minta étel",
+    "min_age": 36,
+    "texture": "darabos",
+    "allergens": [
+      "tej",
+      "tojás",
+      "hal",
+      "glutén",
+      "szója"
+    ]
+  }
 ]

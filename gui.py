@@ -16,7 +16,17 @@ def save_foods(foods):
 
 st.set_page_config(page_title="Baby Menu AI", layout="centered")
 
-st.title("Baby Menu AI – Baba Étel Ajánló")
+st.title("Baba Étel Ajánló")
+
+st.write(
+    "Ez az oldal abban segít, hogy a baba életkorának és egyéni igényeinek megfelelő "
+    "ételeket válasszon. Először adja meg a baba életkorát hónapokban, majd jelölje be "
+    "az esetleges allergiákat és azokat az ételállagokat, amelyeket a baba szívesen fogyaszt. "
+    "A „Menü ajánlása” gombra kattintva a rendszer egy napi menüt állít össze. "
+    "Az ajánlás után visszajelzést is adhat, amely segíti a rendszer tanulását. "
+    "Az „Új étel felvitele” fülön további ételek is hozzáadhatók."
+)
+
 
 tabs = st.tabs(["Étel ajánlás", "Új étel felvitele"])
 
@@ -44,8 +54,6 @@ with tabs[0]:
             st.subheader("Ajánlott napi menü:")
             for f in menu:
                 st.write(f"• {f['name']} ({f['texture']}, min. {f['min_age']} hó)")
-
-            st.info(f"Menü pontszáma: {round(score, 2)}")
 
             col1, col2 = st.columns(2)
 
