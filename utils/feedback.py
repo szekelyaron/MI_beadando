@@ -1,34 +1,33 @@
-import json
-from pathlib import Path
+import json, os
 
-FEEDBACK_FILE = Path("data/feedback.json")
+FILE = "feedback.json"
 
-def load_feedback():
-    if FEEDBACK_FILE.exists():
-        with open(FEEDBACK_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {}
+def load_data():
+    if not os.path.exists(FILE):
+        return {}
+    return json.load(open(FILE, "r", encoding="utf-8"))
 
-def save_feedback(data):
-    with open(FEEDBACK_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+def save_data(data):
+    json.dump(data, open(FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
-def update_feedback(food_name, liked):
-    data = load_feedback()
-    if food_name not in data:
-        data[food_name] = {"positive": 0, "negative": 0}
+def update_feedback(name, liked):
+    data = load_data()
+
+    if name not in data:
+        data[name] = {"positive": 0, "negative": 0, "preference": 0.5}
+
     if liked:
-        data[food_name]["positive"] += 1
+        data[name]["positive"] += 1
     else:
-        data[food_name]["negative"] += 1
-    save_feedback(data)
+        data[name]["negative"] += 1
 
-def get_preference(food_name):
-    data = load_feedback()
-    if food_name not in data:
-        return 0.5
-    pos = data[food_name]["positive"]
-    neg = data[food_name]["negative"]
-    if pos + neg == 0:
-        return 0.5
-    return pos / (pos + neg)
+    pos = data[name]["positive"]
+    neg = data[name]["negative"]
+    total = pos + neg
+
+    if total > 0:
+        data[name]["preference"] = round(pos / total, 3)
+    else:
+        data[name]["preference"] = 0.5
+
+    save_data(data)

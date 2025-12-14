@@ -18,12 +18,15 @@ def evolve(foods, age, allergies, prefs, generations=12, pop_size=20, menu_size=
         )
 
         best = [m for _, m in scored[:5]]
+
         new_pop = best[:]
 
         while len(new_pop) < pop_size:
             p1, p2 = random.sample(best, 2)
+
             cut = random.randint(1, menu_size - 1)
             child = p1[:cut] + p2[cut:]
+
             child = list({f["name"]: f for f in child}.values())
 
             while len(child) < menu_size:
@@ -35,11 +38,5 @@ def evolve(foods, age, allergies, prefs, generations=12, pop_size=20, menu_size=
             new_pop.append(child)
 
         population = new_pop
-
-    scored = sorted(
-        [(fitness(m, age, allergies, prefs), m) for m in population],
-        key=lambda x: x[0],
-        reverse=True
-    )
 
     return scored[0]
