@@ -1,24 +1,14 @@
-import json, os
+from pathlib import Path
+import json
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+FEEDBACK_FILE = BASE_DIR / "data" / "feedback.json"
+
 
 def _load_feedback():
-    if not os.path.exists("feedback.json"):
+    if not FEEDBACK_FILE.exists():
         return {}
-    data = json.load(open("feedback.json", "r", encoding="utf-8"))
-
-    fixed = {}
-    for name, value in data.items():
-        if isinstance(value, dict):
-            pref = float(value.get("preference", 0.5))
-            fixed[name] = {"positive": value.get("positive", 0), "negative": value.get("negative", 0), "preference": pref}
-        elif isinstance(value, (int, float)):
-            v = float(value)
-            if v < 0.0: v = 0.0
-            if v > 1.0: v = 1.0
-            fixed[name] = {"positive": int(v * 10), "negative": int((1 - v) * 10), "preference": v}
-        else:
-            fixed[name] = {"positive": 0, "negative": 0, "preference": 0.5}
-
-    return fixed
+    return json.load(open(FEEDBACK_FILE, "r", encoding="utf-8"))
 
 def _feedback_membership(food_name):
     data = _load_feedback()

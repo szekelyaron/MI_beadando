@@ -1,9 +1,12 @@
-import json, os
+from pathlib import Path
+import json
 
-FILE = "feedback.json"
+BASE_DIR = Path(__file__).resolve().parent.parent
+FILE = BASE_DIR / "data" / "feedback.json"
+FILE.parent.mkdir(parents=True, exist_ok=True)
 
 def load_data():
-    if not os.path.exists(FILE):
+    if not FILE.exists():
         return {}
     return json.load(open(FILE, "r", encoding="utf-8"))
 
@@ -14,7 +17,11 @@ def update_feedback(name, liked):
     data = load_data()
 
     if name not in data:
-        data[name] = {"positive": 0, "negative": 0, "preference": 0.5}
+        data[name] = {
+            "positive": 0,
+            "negative": 0,
+            "preference": 0.5
+        }
 
     if liked:
         data[name]["positive"] += 1

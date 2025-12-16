@@ -4,8 +4,19 @@ from pathlib import Path
 from core.recommender import recommend_day_menu
 from utils.feedback import update_feedback
 
-DATA_PATH = Path("data/foods.json")
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data" / "foods.json"
 
+if "rec" not in st.session_state:
+    st.session_state.rec = {
+        "menu": None,
+        "score": None,
+        "feedback_given": False,
+        "feedback_message": None,
+        "feedback_type": None
+    }
+
+@st.cache_data
 def load_foods():
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -15,82 +26,94 @@ def save_foods(foods):
         json.dump(foods, f, ensure_ascii=False, indent=2)
 
 st.set_page_config(page_title="Baby Menu AI", layout="centered")
-
 st.title("Baba Étel Ajánló")
-
-st.write(
-    "Ez az oldal abban segít, hogy a baba életkorának és egyéni igényeinek megfelelő "
-    "ételeket válasszon. Először adja meg a baba életkorát hónapokban, majd jelölje be "
-    "az esetleges allergiákat és azokat az ételállagokat, amelyeket a baba szívesen fogyaszt. "
-    "A „Menü ajánlása” gombra kattintva a rendszer egy napi menüt állít össze. "
-    "Az ajánlás után visszajelzést is adhat, amely segíti a rendszer tanulását. "
-    "Az „Új étel felvitele” fülön további ételek is hozzáadhatók."
-)
-
 
 tabs = st.tabs(["Étel ajánlás", "Új étel felvitele"])
 
 with tabs[0]:
-    st.header("Napi étel ajánlás")
-
-    age = st.number_input("Baba életkora (hónap):", min_value=4, max_value=36, value=8)
-
-    allergy_options = ["tej", "tojás", "hal", "glutén", "szója"]
-    selected_allergies = st.multiselect("Allergiák:", allergy_options)
-
-    texture_options = ["püré", "puha", "darabos"]
-    selected_textures = st.multiselect("Kedvelt állagok:", texture_options, default=["püré"])
+    age = st.number_input("Baba életkora (hónap):", 4, 36, 8)
+    selected_allergies = st.multiselect(
+        "Allergiák:", ["tej", "tojás", "hal", "glutén", "szója"]
+    )
+    selected_textures = st.multiselect(
+        "Kedvelt állagok:", ["püré", "puha", "darabos"], default=["püré"]
+    )
 
     if st.button("Menü ajánlása"):
         foods = load_foods()
-
-        if len(foods) < 3:
-            st.error("Nincs elég étel az ajánláshoz.")
-        else:
+        if len(foods) >= 3:
             menu, score = recommend_day_menu(
                 foods, age, selected_allergies, selected_textures
             )
+            st.session_state.rec = {
+                "menu": menu,
+                "score": score,
+                "feedback_given": False,
+                "feedback_message": None,
+                "feedback_type": None
+            }
+        else:
+            st.session_state.rec = {
+                "menu": None,
+                "score": None,
+                "feedback_given": False,
+                "feedback_message": None,
+                "feedback_type": None
+            }
 
-            st.subheader("Ajánlott napi menü:")
-            for f in menu:
-                st.write(f"• {f['name']} ({f['texture']}, min. {f['min_age']} hó)")
+    rec = st.session_state.rec
 
+    if rec["menu"]:
+        st.subheader("Ajánlott napi menü:")
+        for f in rec["menu"]:
+            st.write(f"• {f['name']} ({f['texture']}, min. {f['min_age']} hó)")
+        st.caption(f"Illeszkedés a megadott adatokhoz: {rec['score'] * 100:.1f}%")
+
+        if not rec["feedback_given"]:
             col1, col2 = st.columns(2)
 
             with col1:
                 if st.button("Tetszett a menü"):
-                    for f in menu:
+                    for f in rec["menu"]:
                         update_feedback(f["name"], True)
-                    st.success("Visszajelzés rögzítve.")
+                    rec["feedback_given"] = True
+                    rec["feedback_message"] = "Köszönjük a visszajelzést!"
+                    rec["feedback_type"] = "success"
+                    st.rerun()
 
             with col2:
                 if st.button("Nem tetszett a menü"):
-                    for f in menu:
+                    for f in rec["menu"]:
                         update_feedback(f["name"], False)
-                    st.warning("Visszajelzés rögzítve.")
+                    rec["feedback_given"] = True
+                    rec["feedback_message"] = "Köszönjük a visszajelzést!"
+                    rec["feedback_type"] = "warning"
+                    st.rerun()
+
+        if rec["feedback_message"]:
+            if rec["feedback_type"] == "success":
+                st.success(rec["feedback_message"])
+            else:
+                st.warning(rec["feedback_message"])
 
 with tabs[1]:
-    st.header("Új étel felvitele")
-
     foods = load_foods()
 
     name = st.text_input("Étel neve:")
     min_age = st.number_input("Ajánlott életkor (hónap):", 4, 36, 6)
     texture = st.selectbox("Állag:", ["püré", "puha", "darabos"])
-    allergens = st.multiselect("Allergének:", ["tej", "tojás", "hal", "glutén", "szója"])
+    allergens = st.multiselect(
+        "Allergének:", ["tej", "tojás", "hal", "glutén", "szója"]
+    )
 
     if st.button("Étel mentése"):
-        if not name.strip():
-            st.error("Adj meg egy nevet.")
-        else:
-            new_food = {
+        if name.strip():
+            foods.append({
                 "name": name.strip(),
                 "min_age": int(min_age),
                 "texture": texture,
                 "allergens": allergens
-            }
-
-            foods.append(new_food)
+            })
             save_foods(foods)
-
+            st.cache_data.clear()
             st.success("Az új étel sikeresen hozzáadva.")

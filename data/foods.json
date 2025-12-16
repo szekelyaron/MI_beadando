@@ -706,5 +706,39 @@
       "glutén",
       "szója"
     ]
+  },
+  {
+    "name": "Minta étel 4",
+    "min_age": 17,
+    "texture": "püré",
+    "allergens": [
+      "tojás"
+    ]
+  },
+  {
+    "name": "Teszt 5",
+    "min_age": 23,
+    "texture": "püré",
+    "allergens": [
+      "glutén",
+      "hal"
+    ]
+  },
+  {
+    "name": "Teszt 5",
+    "min_age": 23,
+    "texture": "püré",
+    "allergens": [
+      "glutén",
+      "hal"
+    ]
+  },
+  {
+    "name": "Teszt 6",
+    "min_age": 22,
+    "texture": "puha",
+    "allergens": [
+      "hal"
+    ]
   }
 ]
