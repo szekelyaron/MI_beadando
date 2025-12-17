@@ -27,6 +27,12 @@ def save_foods(foods):
 
 st.set_page_config(page_title="Baby Menu AI", layout="centered")
 st.title("Baba Étel Ajánló")
+st.write(
+    "Ez az alkalmazás abban segít, hogy a baba életkorának és egyéni igényeinek megfelelő "
+    "ételeket válasszon. Add meg a baba életkorát hónapokban, jelöld meg az esetleges "
+    "allergiákat és a kedvelt ételállagokat, majd kattints a „Menü ajánlása” gombra. "
+    "Az ajánlás után visszajelzést adhatsz, amely segíti a rendszer tanulását."
+)
 
 tabs = st.tabs(["Étel ajánlás", "Új étel felvitele"])
 
